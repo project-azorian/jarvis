@@ -7,6 +7,12 @@ jobs:
     name: Example Minikube-Kubernetes Cluster interaction
     runs-on: ubuntu-latest
     steps:
+      - name: lsblk
+        run: lsblk
+      - name: lspci
+        run: lspci
+      - name: free
+        run: free -m
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup Minikube
